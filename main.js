@@ -11,15 +11,12 @@ const numberMatchToRemove = (numberToRemove) => {
   while (numberToRemove > 0) {
     const player = Number(prompt(`Joueur ${currentPlayer} : Combien d'alumette soutez fou retirer ? (1 - 6)`))
 
-    console.log({ players: player });
-
     if (player > 6 || player < 1 || isNaN(player)) {
       alert("Le nomber n'est pas compris entre 1 - 6");
-     continue;
+      continue;
     }
 
     numberToRemove -= player
-    console.log(`Joueur ${currentPlayer} a retiré ${player} allumettes. Il reste ${numberToRemove} allumettes.`);
 
     if (numberToRemove <= 0) {
       alert(`Joueur ${currentPlayer} a gagné !`);
