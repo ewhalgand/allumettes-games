@@ -1,0 +1,97 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+:root {
+    --background-box: #f78640;
+    --background-button: #fab277;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number]{
+    -moz-appearance: textfield;
+}
+
+body {
+    height: 100vh;
+}
+
+/* Main Container */
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 350px;
+    margin: auto;
+}
+
+/* Text Container */
+
+.main .container {
+    text-align: center;
+    background: var(--background-box);
+    color: #fff;
+    padding: 20px;  
+    border-radius: 10px;
+    margin-bottom: 40px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.main .container h1 {
+    margin-bottom: 15px;
+}
+
+/* Text Question */
+
+.main .question {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+
+/* Form Container */
+
+.main .form {
+    display: flex;
+    flex-direction: column;
+}
+
+.main .form .player {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.main .form .input_number {
+    margin-bottom: 40px;
+    padding: 10px;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    outline: none;
+    border: 2px solid var(--background-box);
+}
+
+.main .form .button {
+    padding: 10px;
+    background-color: var(--background-button);
+    color: #fff;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    outline: 2px solid var(--background-button);
+    border: 2px solid #fff;
+}

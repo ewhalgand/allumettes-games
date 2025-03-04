@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jeu des Allumettes</title>
+    <script defer src="/dist/main.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="main">
+      <section id="set-player">
+        <div class="container">
+          <h1>Nombre de joueur ?</h1>
+          <form class="form" id="form-multi">
+            <input
+              type="number"
+              name="number"
+              id="number-choice-value"
+              class="input_number"
+              placeholder="Entrer le nombre de joueur"
+            />
+
+            <button type="submit" class="button">Envoyer</button>
+          </form>
+        </div>
+      </section>
+      <section class="section" id="games">
+        <div class="container">
+          <h1>Jeu des Allumettes</h1>
+          <p id="number-matches">Nombre d'Allumettes restant 50</p>
+        </div>
+        <div class="question">
+          <p id="player">Joueur 1 :</p>
+          <p>Combien d'alumette soutez fou retirer ? (1 - 6)</p>
+          <p id="error"></p>
+        </div>
+        <form class="form" id="form">
+          <label for="number" class="player" id="player-text">Joueur</label>
+          <input
+            type="number"
+            name="number"
+            id="number-value"
+            class="input_number"
+            placeholder="Entrer un nombre"
+          />
+
+          <button type="submit" class="button">Envoyer</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
