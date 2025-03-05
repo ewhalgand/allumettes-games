@@ -20,7 +20,7 @@ formMulti.addEventListener("submit", (e) => {
 
   multiGame = multiPlayer > 0 ? multiPlayer : 1;
 
-  numberMatchToRemove(10);
+  numberMatchToRemove(50);
 });
 
 const changeDisplay = () => {
