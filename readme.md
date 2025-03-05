@@ -1,6 +1,6 @@
 # Allumettes Games
 
-Petit jeux avec la posibilitée de joueur en multi-joueur
+Petit jeux avec la possibilité de jouer en multi-joueur
 
 - Pour run le projet `pnpm run start` ou `npm run start`
 
