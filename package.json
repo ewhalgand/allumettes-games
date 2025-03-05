@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+     "start": "live-server ./src --mount=/public:public --mount=/dist:dist"
   },
   "keywords": [],
   "author": "",
@@ -12,5 +13,8 @@
   "packageManager": "pnpm@10.5.2",
   "devDependencies": {
     "typescript": "^5.8.2"
+  },
+  "dependencies": {
+    "live-server": "^1.2.2"
   }
 }

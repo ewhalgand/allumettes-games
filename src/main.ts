@@ -11,6 +11,9 @@ const error = document.querySelector("#error") as HTMLParagraphElement;
 const setPlayer = document.querySelector("#set-player") as HTMLDivElement;
 const games = document.querySelector("#games") as HTMLDivElement;
 
+const buttonSubmit = (document.querySelector("#post") as HTMLButtonElement);
+const buttonRetry = (document.querySelector("#retry") as HTMLButtonElement)
+
 let multiGame: number;
 
 formMulti.addEventListener("submit", (e) => {
@@ -19,8 +22,8 @@ formMulti.addEventListener("submit", (e) => {
   const multiPlayer = Number(numberChoiceValue.value);
 
   multiGame = multiPlayer > 0 ? multiPlayer : 1;
-
-  numberMatchToRemove(50);
+  
+  numberMatchToRemove(10);
 });
 
 const changeDisplay = () => {
@@ -29,6 +32,7 @@ const changeDisplay = () => {
   } else {
     games.style.display = "block";
     setPlayer.style.display = "none";
+    buttonRetry.style.display = "none";
   }
 };
 changeDisplay();
@@ -57,6 +61,10 @@ const numberMatchToRemove = (numberToRemove: number) => {
 
     if (numberToRemove <= 0) {
       numberMatches.textContent = `Joueur ${currentPlayer} a gagné !`;
+      buttonRetry.style.display = "block";
+      buttonRetry.addEventListener("click", () => location.reload())
+      buttonSubmit.style.display = "none"
+      numberValue.disabled = true
       return;
     }
 
