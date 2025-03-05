@@ -117,3 +117,14 @@ body {
     background-color: #fab277b3;
     outline: 2px solid #fab277b3;
 }
+
+@media screen and (max-width: 400px) {
+    .main {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .main .question {
+        text-align: center;
+    }
+}
