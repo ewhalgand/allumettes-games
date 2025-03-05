@@ -8,6 +8,7 @@
 :root {
     --background-box: #f78640;
     --background-button: #fab277;
+    --color-error: #ff3d3d;
 }
 
 input::-webkit-outer-spin-button,
@@ -62,6 +63,11 @@ body {
     margin-bottom: 40px;
 }
 
+.main .question .error {
+    color: var(--color-error);
+    font-weight: 600;
+}
+
 /* Form Container */
 
 .main .form {
@@ -84,6 +90,10 @@ body {
     border: 2px solid var(--background-box);
 }
 
+.main .form .input_number.active {
+    border: 2px solid var(--color-error);
+}
+
 .main .form .button {
     padding: 10px;
     background-color: var(--background-button);
@@ -94,4 +104,9 @@ body {
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     outline: 2px solid var(--background-button);
     border: 2px solid #fff;
+}
+
+.main .form .button:hover {
+    background-color: #fab277b3;
+    outline: 2px solid #fab277b3;
 }

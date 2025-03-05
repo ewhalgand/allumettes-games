@@ -44,13 +44,16 @@ const numberMatchToRemove = (numberToRemove: number) => {
     let playerValue = Number(numberValue.value);
 
     if (playerValue > 6 || playerValue < 1 || isNaN(playerValue)) {
+      error.style.display = "block"
+      numberValue.classList.add("active")
       error.textContent = "Le nomber n'est pas compris entre 1 - 6";
       return;
     }
 
-    numberMatches.textContent = `Nombre d'Allumettes restants ${(numberToRemove -=
-      playerValue)}`;
+    numberMatches.textContent = `Nombre d'Allumettes restants ${(numberToRemove -= playerValue)}`;
     numberValue.value = "";
+    error.style.display = "none"
+    numberValue.classList.remove("active")
 
     if (numberToRemove <= 0) {
       numberMatches.textContent = `Joueur ${currentPlayer} a gagné !`;
